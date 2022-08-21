@@ -9,6 +9,9 @@
 :root {
   --color-1: #23424a;
   --color-2: #38cfd9;
+  --color-3: #3a3a3a;
+  --color-4: #136c72;
+  --color-5: #87629a;
   --container-bg-color: var(--color-1);
   --button-bg-color: var(--color-2);
 }
@@ -24,19 +27,19 @@ body {
   font-family: "Roboto";
 }
 
-.main {
+.header {
   color: white;
   max-width: 700px;
   padding: min(10rem, 10vmin) min(5rem, 10vmin) min(10rem, 10vmin)
     min(5rem, 10vmin);
 }
 
-.main > h1 {
+.header > h1 {
   font-size: 2.8rem;
   font-weight: 900;
 }
 
-.main > p {
+.header > p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 2rem;
@@ -44,7 +47,7 @@ body {
   margin-bottom: 3rem;
 }
 
-.main > button {
+.header > button {
   background-color: var(--button-bg-color);
   border: 0;
   padding: 1rem 3rem;
@@ -52,4 +55,9 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.15rem;
+}
+
+.features-1 {
+  display: flex;
+  flex-direction: row;
 }
