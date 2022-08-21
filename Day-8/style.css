@@ -19,7 +19,7 @@
   --area-top-bottom-padding: min(10rem, 10vmin);
   --content-top-bottom-padding: min(5rem, 10vmin);
   --content-right-left-padding: min(5rem, 10vmin);
-  --area-padding: var(--area-top-bottom-padding) var(--area-right-left-padding);
+  --item-padding: var(--area-top-bottom-padding) var(--area-right-left-padding);
   --content-padding: var(--content-top-bottom-padding)
     var(--content-right-left-padding);
   --dark-font-color: var(--color-3);
@@ -33,29 +33,34 @@
 html,
 body {
   height: 100%;
-}
-
-.container {
-  width: 100%;
   font-family: "Roboto";
 }
 
-.header-container {
-  padding: var(--area-padding);
-  background-color: var(--container-bg-color);
-}
-
 .header {
-  color: white;
-  max-width: 700px;
+  background-color: var(--container-bg-color);
+  color: var(--light-font-color);
 }
 
-.header > h1 {
+.header__item,
+.header {
+  width: 100%;
+}
+
+.header__item {
+  padding: var(--item-padding);
+}
+
+.item__container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.item__main-header {
   font-size: 2.8rem;
   font-weight: 900;
 }
 
-.header > p {
+.item__description {
   font-size: 1rem;
   font-weight: 400;
   line-height: 2rem;
@@ -63,7 +68,7 @@ body {
   margin-bottom: 3rem;
 }
 
-.header > button {
+.item__button {
   background-color: var(--button-bg-color);
   border: 0;
   padding: 1rem 3rem;
@@ -73,10 +78,21 @@ body {
   font-size: 1.15rem;
 }
 
-.features {
+.content,
+.content__features {
+  width: 100%;
+}
+
+.content__features {
+  padding: var(--content-padding);
+}
+
+.features__container {
   display: flex;
   gap: 2rem;
   flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .features--light {
@@ -99,8 +115,4 @@ body {
 
 .block__description {
   margin-top: 1rem;
-}
-
-.content__features {
-  padding: var(--content-padding);
 }
