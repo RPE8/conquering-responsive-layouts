@@ -39,12 +39,23 @@ body {
 .header2 {
   background: #136c72;
   padding: .5em 0;
+	width: 100%;
+}
+
+.nav {
+	width: 100%;
 }
 
 .nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
+	display: flex;
+	gap: 2rem;
+	margin: 0 auto;
+	width: min(80%, 1400px);
+	align-items: center;;
+	height: 2rem;
 }
 
 .nav__link {
