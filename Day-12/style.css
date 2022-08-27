@@ -66,24 +66,28 @@ body, html {
 	max-width: var(--max-width);
 	display: flex;
 	flex-direction: row;
-	gap: 2rem;
+	gap: 3rem;
 }
 
 .section__container > * {
 	flex-basis: 50%;
 }
 
-.section--description .container {
+.section--description .section__container {
 	padding-block: 5rem;
-	flex-wrap: wrap;
+	flex-direction: column;
 }
 
-.section--description .medium-header {
-	flex: 1 0 100%;
+.section--description .container > div {
+	display: flex;
+	gap: 3rem;
+	flex-direction: row;
 }
+
 
 .section--description .description{
-	flex: 0 1 40%;
+	
+	flex: 0 1 50%;
 }
 
 .section--description {
