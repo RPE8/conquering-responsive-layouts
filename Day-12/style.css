@@ -16,9 +16,14 @@ body, html {
 	--color-2: #824936;
 	--color-3: #222C2A;
 	--color-4: rgb(92, 92, 92);
+	--color-5: #fafafa;
+	--max-width: 1128px;;
 	--header-bg-color: var(--color-1);
 	--small-header-color: var(--color-4);
 	--big-header-color: var(--color-2);
+	--section-description-bg-color: var(--color-5);
+	--description-dark-color: var(--color-3);
+	--header-dark-color: var(--color-2);
 }
 
 .header {
@@ -29,10 +34,10 @@ body, html {
 
 .container {
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 1.5rem;
 	text-align: center;
 	height: 100%;
-	max-width: 1128px;
+	max-width: var(--max-width);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -52,3 +57,56 @@ body, html {
 	color: var(--big-header-color);
 	font-family: "Playfair Display";
 }
+
+.main, .section {
+	width: 100%;
+}
+
+.section__container {
+	max-width: var(--max-width);
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
+
+.section__container > * {
+	flex-basis: 50%;
+}
+
+.section--description .container {
+	padding-block: 5rem;
+	flex-wrap: wrap;
+}
+
+.section--description .medium-header {
+	flex: 1 0 100%;
+}
+
+.section--description .description{
+	flex: 0 1 40%;
+}
+
+.section--description {
+	background-color: var(--section-description-bg-color);
+}
+
+.medium-header {
+	font-size: 2rem;
+}
+
+.medium-header--dark {
+	color: var(--header-dark-color);
+}
+
+.description {
+	text-align: left;
+	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 0.8rem;
+	line-height: 1.4rem;
+}
+
+.description--dark {
+	color: var(--description-dark-color);
+}
+
