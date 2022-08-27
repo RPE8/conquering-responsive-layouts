@@ -22,8 +22,12 @@ body, html {
 	--small-header-color: var(--color-4);
 	--big-header-color: var(--color-2);
 	--section-description-bg-color: var(--color-5);
+	--section-image1-bg-color: var(--color-3);
+	--section-image2-bg-color: var(--color-2);
 	--description-dark-color: var(--color-3);
 	--header-dark-color: var(--color-2);
+	--description-light-color: var(--color-1);
+	--header-light-color: var(--color-1);
 }
 
 .header {
@@ -63,8 +67,6 @@ body, html {
 }
 
 .section__container {
-	max-width: var(--max-width);
-	display: flex;
 	flex-direction: row;
 	gap: 3rem;
 }
@@ -86,7 +88,6 @@ body, html {
 
 
 .section--description .description{
-	
 	flex: 0 1 50%;
 }
 
@@ -94,12 +95,25 @@ body, html {
 	background-color: var(--section-description-bg-color);
 }
 
+.section--image1 {
+	background-color: var(--section-image1-bg-color);
+}
+
+.section--image2 {
+	background-color: var(--section-image2-bg-color);
+}
+
 .medium-header {
 	font-size: 2rem;
+	text-align: left;
 }
 
 .medium-header--dark {
 	color: var(--header-dark-color);
+}
+
+.medium-header--light {
+	color: var(--header-light-color);
 }
 
 .description {
@@ -112,5 +126,14 @@ body, html {
 
 .description--dark {
 	color: var(--description-dark-color);
+}
+
+.description--light {
+	color: var(--description-light-color);
+}
+
+.section_img {
+	height: 100%;
+	width: 100%;
 }
 
